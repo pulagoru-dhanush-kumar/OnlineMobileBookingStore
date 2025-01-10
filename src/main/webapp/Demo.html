@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanush Mobile Store</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+        }
+      
+        .navbar {
+            background-color: #2874f0;
+            padding: 10px 20px;
+            color: white;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffeb3b;
+        }
+
+    
+        .product-list {
+            padding: 20px;
+        }
+
+        .product-card {
+            display: flex;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        .product-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #2874f0;
+            margin: 5px 0;
+        }
+
+        .product-offer {
+            font-size: 14px;
+            color: #388e3c;
+            margin: 5px 0;
+        }
+
+        .buy-now {
+    display: inline-block;
+    background-color: #ff5722;
+    color: white;
+    padding: 8px 8px; /* Reduced padding */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+    width: 58px; /* Set width to auto for natural sizing */
+}
+
+.buy-now:hover {
+    background-color: #e64a19;
+}
+
+
+        .product-specs {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Dhanush Mobile Booking Store</a>
+            <ul class="nav-links">
+                <li><a href="Demo.html"><b>Home</b></b></a></li>
+                <li><a href="Demo.html"><b>Products</b></a></li>
+                <li><a href="Contact.html"><b>Contact</b></a></li>
+                <li><a href="about.html"><b>About</b></a></li>
+                <li><a href="registration.html"><b>Register / Login</b></a></li>
+                <li><a href="logout"><b>Logout</b></a></li>
+               
+            </ul>
+        </div>
+    </nav>
+    <div class="product-list">
+        <div class="product-card">
+            <img src="file:///C:/Users/dhanushkumar/eclipse-workspace/OnlineMobileBookingStore/Mobiles/Images/motorola.jpg" alt="Motorola">
+            <div class="product-info">
+                <div class="product-title">Motorola G73</div>
+                <div class="product-price">₹15,999</div>
+                <div class="product-offer">Extra ₹2,000 off on Exchange</div>
+                <div class="product-specs">
+                    6.5-inch Full HD+ Display<br>5000mAh Battery<br>50MP Dual Camera
+                </div>
+                <a href="Buy.jsp" class="buy-now">Buy Now</a>
+            </div>
+        </div> 
+        <div class="product-card">
+            <img src="file:///C:/Users/dhanushkumar/eclipse-workspace/OnlineMobileBookingStore/Mobiles/Images/poco.jpg" alt="Poco">
+            <div class="product-info">
+                <div class="product-title">Poco X5 Pro</div>
+                <div class="product-price">₹20,499</div>
+                <div class="product-offer">Flat ₹1,500 off on HDFC Cards</div>
+                <div class="product-specs">
+                    6.67-inch AMOLED Display<br>5000mAh Battery<br>108MP Triple Camera
+                </div>
+                <a href="Buy.jsp" class="buy-now">Buy Now</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="file:///C:/Users/dhanushkumar/eclipse-workspace/OnlineMobileBookingStore/Mobiles/Images/vivo.jpg" alt="Vivo">
+            <div class="product-info">
+                <div class="product-title">Vivo Y100</div>
+                <div class="product-price">₹18,999</div>
+                <div class="product-offer">10% Cashback on Prepaid Orders</div>
+                <div class="product-specs">
+                 6.38-inch AMOLED Display<br>4500mAh Battery<br>64MP OIS Camera
+                </div>
+                <a href="Buy.jsp" class="buy-now">Buy Now</a>
+            </div>
+        </div>
+        <div class="product-card">
+           <img src="file:///C:/Users/dhanushkumar/eclipse-workspace/OnlineMobileBookingStore/Mobiles/Images/apple%20iphone15.jpg"alt="iPhone">
+            <div class="product-info">
+                <div class="product-title">Apple iPhone 15</div>
+                <div class="product-price">₹1,32,998</div>
+                <div class="product-offer">No Cost EMI Available</div>
+                <div class="product-specs">
+                    128 GB ROM<br>15.49 cm (6.1 inch) Super Retina XDR Display<br>
+                    48MP + 12MP | 12MP Front Camera<br>A16 Bionic Chip
+                </div>
+                <a href="Buy.jsp" class="buy-now">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

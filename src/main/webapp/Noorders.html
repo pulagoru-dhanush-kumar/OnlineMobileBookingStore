@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Orders Yet</title>
+  <style>
+    /* Global styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      border: 2px solid #ddd;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #e74c3c;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .order-button {
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .order-button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Additional styles */
+    .cta-message {
+      font-size: 18px;
+      color: #2c3e50;
+      margin-top: 30px;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 20px;
+      }
+      .order-button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>You haven't ordered anything yet!</h1>
+    <p>It looks like you haven't placed any orders. Explore our website and start shopping!</p>
+    <a href="Dynamic.jsp" class="order-button">Go to Home Page</a>
+    <p class="cta-message">Browse our catalog and make your first purchase today!</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app >
+  <display-name>OnlineMobileBookingStore</display-name>
+  <servlet>
+    <servlet-name>servlet1</servlet-name>
+    <servlet-class>com.mobile.app.Authentication</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet1</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>servlet2</servlet-name>
+    <servlet-class>com.mobile.app.LoginAuthentication</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet2</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>servlet3</servlet-name>
+    <servlet-class>com.mobile.app.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet3</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>servlet4</servlet-name>
+    <servlet-class>com.mobile.app.OrderdataFlush</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet4</servlet-name>
+    <url-pattern>/orderprocessing</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>servlet5</servlet-name>
+    <servlet-class>com.mobile.app.Datafetcher</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet5</servlet-name>
+    <url-pattern>/Datafetcher</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>servlet6</servlet-name>
+    <servlet-class>com.mobile.app.Forgotpassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet6</servlet-name>
+    <url-pattern>/emailverify</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>servlet7</servlet-name>
+    <servlet-class>com.mobile.app.OtpVerification</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet7</servlet-name>
+    <url-pattern>/verifyOtp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>servlet8</servlet-name>
+    <servlet-class>com.mobile.app.Resetpassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet8</servlet-name>
+    <url-pattern>/resetpasswords</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>servlet9</servlet-name>
+    <servlet-class>com.mobile.app.GooglepayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet9</servlet-name>
+    <url-pattern>/googlepay</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>servlet10</servlet-name>
+    <servlet-class>com.mobile.app.PhonepayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet10</servlet-name>
+    <url-pattern>/phonepay</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>servlet11</servlet-name>
+    <servlet-class>com.mobile.app.Customersupport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet11</servlet-name>
+    <url-pattern>/customersupport</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+</web-app>

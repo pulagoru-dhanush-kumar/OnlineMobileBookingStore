@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Payment Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8f9fa; /* Light grey background */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Container Styles */
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin: 30px auto;
+            background: #ffffff; /* White card-style container */
+            padding: 25px 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            color: #444; /* Neutral grey for the heading */
+            margin-bottom: 25px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Form Group */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        /* Input Fields */
+        input, textarea, select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box; /* Ensures padding and border are included in the width */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Consistent Outline Styles */
+        input:focus, textarea:focus, select:focus {
+            border-color: #50c878; /* Soft green for focus */
+            box-shadow: 0 0 0 3px rgba(80, 200, 120, 0.4); /* Uniform outline within bounds */
+            outline: none;
+        }
+
+        /* Textarea Styles */
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        /* Dropdown Styles */
+        select {
+            appearance: none;
+            background: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23555%22%20d%3D%22M7%2010l5%205%205-5H7z%22/%3E%3C/svg%3E') no-repeat right 10px center;
+            background-size: 12px;
+        }
+
+        /* Button Styles */
+        button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            background: #50c878; /* Soft green */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #3aa96c; /* Slightly darker green */
+            transform: scale(1.02);
+        }
+
+        /* Error Styling */
+        input:invalid, textarea:invalid, select:invalid {
+            border-color: #e74c3c;
+        }
+
+        /* Footer Note */
+        .note {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 15px;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Page</h1>
+        <form action="orderprocessing" method=post>
+            <!-- Address Section -->
+            <div class="form-group">
+                <label for="address">Delivery Address <span style="color: red;">*</span></label>
+                <textarea id="address" name="address" placeholder="Enter your address here..." required></textarea>
+            </div>
+
+            <!-- Quantity Section -->
+            <div class="form-group">
+                <label for="quantity">Number of Items <span style="color: red;">*</span></label>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required>
+            </div>
+
+            <!-- Payment Method Section -->
+            <div class="form-group">
+                <label for="payment-method">Payment Method <span style="color: red;">*</span></label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="" disabled selected>Select a payment method</option>
+                    <option value="phonepe">PhonePe</option>
+                    <option value="googlepay">Google Pay</option>
+                    <option value="razorpay">Razorpay</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" >Proceed to Pay</button>
+        </form>
+        <p class="note">* All fields are mandatory.</p>
+    </div>
+</body>
+</html>

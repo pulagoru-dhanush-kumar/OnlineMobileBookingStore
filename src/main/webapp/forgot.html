@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with OTP</title>
+    <style>
+        /* Styling as per previous code */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .forgot-link {
+            margin-top: 10px;
+        }
+        .forgot-link a {
+            color: blue;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .forgot-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Email verification....</h1>
+        <form id="forgotpass" action="emailverify" method ="Post"style="display: block;">
+            <label for="email">Enter Email:</label>
+            <input type="text" id="email" name="email" placeholder="Enter emailID" required/><br>
+            <input type="submit" id="submitEmail" value="Submit Email" disabled />
+        </form>
+       
+    </div>
+    <script>
+        document.getElementById("email").addEventListener("input", function() {
+            const email = document.getElementById("email").value;
+            const submitButton = document.getElementById("submitEmail");
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (emailRegex.test(email)) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        });
+
+      
+    </script>
+</body>
+</html>
